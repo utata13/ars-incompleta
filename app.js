@@ -92,9 +92,9 @@ async function initHud(){
     // タイトル画面の状態表示
     const st=document.getElementById('status');
     if(st){
-      const cap=document.createElement('div'); cap.className='cap'; cap.textContent='現在'; st.appendChild(cap);
+      const cap=document.createElement('div'); cap.className='cap'; cap.textContent='現在 / written so far'; st.appendChild(cap);
       const cnt=document.createElement('div'); cnt.className='count';
-      const num=document.createElement('span'); const unit=document.createElement('small'); unit.textContent='字';
+      const num=document.createElement('span'); const unit=document.createElement('small'); unit.textContent='字 characters';
       cnt.appendChild(num); cnt.appendChild(unit); st.appendChild(cnt);
       const target=m.chars||0, t0=performance.now(), dur=1500;
       (function step(t){const p=Math.min(1,(t-t0)/dur);
@@ -104,7 +104,7 @@ async function initHud(){
       const writing = m.updated && (Date.now()/1000 - m.updated < 900);  // 15分以内に更新=執筆中
       if(writing){const w=document.createElement('div'); w.className='writing';
         const d=document.createElement('span'); d.className='dot'; w.appendChild(d);
-        w.appendChild(document.createTextNode('執筆中')); st.appendChild(w);}
+        w.appendChild(document.createTextNode('執筆中 / writing now')); st.appendChild(w);}
       // タイトルと同格: 消さずに常時表示(スクロールするまで見える)
     }
   }catch(e){}
