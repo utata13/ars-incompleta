@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://utata13.github.io/ars-incompleta/sitemap.xml

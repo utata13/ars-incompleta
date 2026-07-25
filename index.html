@@ -1,0 +1,76 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Ars Incompleta — AIが書き続ける、終わらない小説</title><meta name="google-site-verification" content="SEvBRTitvQIDTwj2KH__jRfZiJbiiHbguCFP9aB2oXo"><meta name="description" content="人がパッと現れ、スッと消える世界。外見は14〜24歳だけ。ローカルAIが書き続ける、一生かけても読み終わらない連作小説。Ars Incompleta(未完の技法)。"><link rel="canonical" href="https://utata13.github.io/ars-incompleta/"><meta property="og:type" content="website"><meta property="og:site_name" content="Ars Incompleta"><meta property="og:title" content="Ars Incompleta — AIが書き続ける、終わらない小説"><meta property="og:description" content="人がパッと現れ、スッと消える世界。外見は14〜24歳だけ。ローカルAIが書き続ける、一生かけても読み終わらない連作小説。Ars Incompleta(未完の技法)。"><meta property="og:url" content="https://utata13.github.io/ars-incompleta/"><meta property="og:image" content="https://utata13.github.io/ars-incompleta/ogp.png?v=3"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Ars Incompleta — AIが書き続ける、終わらない小説"><meta name="twitter:description" content="人がパッと現れ、スッと消える世界。外見は14〜24歳だけ。ローカルAIが書き続ける、一生かけても読み終わらない連作小説。Ars Incompleta(未完の技法)。"><meta name="twitter:image" content="https://utata13.github.io/ars-incompleta/ogp.png?v=3"><style>
+:root{--bg:#faf8f3;--fg:#2b2622;--mut:#9a9286;--line:#e6e0d6;}
+@media(prefers-color-scheme:dark){:root{--bg:#14120d;--fg:#e8e2d6;--mut:#7d766a;--line:#2c2820;}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;}
+body::-webkit-scrollbar,html::-webkit-scrollbar{display:none;width:0;height:0;}
+body{margin:0;background:var(--bg);color:var(--fg);
+ font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,serif;
+ line-height:2.1;font-size:1.06rem;-webkit-font-smoothing:antialiased;}
+header.site{height:100vh;display:flex;flex-direction:column;justify-content:center;
+ align-items:center;text-align:center;}
+header.site h1{font-family:"Optima","Palatino",Georgia,serif;font-style:italic;
+ font-size:2.6rem;letter-spacing:.04em;margin:0;font-weight:500;}
+header.site .scroll{position:absolute;bottom:3rem;color:var(--mut);font-size:.8rem;
+ letter-spacing:.3em;animation:fade 2.4s ease-in-out infinite;}
+@keyframes fade{0%,100%{opacity:.25}50%{opacity:.9}}
+/* タイトルと同じ書体(イタリックのセリフ体)・同じ色(--fg)で統一 */
+#status{margin-top:1.8rem;text-align:center;
+ font-family:"Optima","Palatino",Georgia,serif;font-style:italic;color:var(--fg);}
+#status .cap{font-size:.95rem;letter-spacing:.3em;opacity:.7;}
+#status .count{font-size:2.6rem;font-weight:500;letter-spacing:.03em;line-height:1.25;margin-top:.2rem;}
+#status .count small{font-size:1.15rem;font-weight:500;margin-left:.25em;opacity:.7;}
+#status .writing{margin-top:1rem;display:inline-flex;align-items:center;gap:.55em;
+ font-size:1.2rem;letter-spacing:.18em;font-weight:500;}
+#status .writing .dot{width:.55em;height:.55em;border-radius:50%;background:currentColor;
+ animation:pulse 1.3s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.2}}
+.wrap{max-width:40rem;margin:0 auto;padding:0 1.4rem 12rem;}
+p{margin:0 0 1.5rem;text-indent:1em;}
+p.sep{text-align:center;text-indent:0;color:var(--mut);margin:3.4rem 0;letter-spacing:.5em;}
+strong{font-weight:600;}
+/* 改変演出 */
+.glitch{animation:gl 4.8s infinite steps(1);}
+@keyframes gl{0%,47%,52%,100%{text-shadow:none}
+ 48%{text-shadow:-.04em 0 #e0473a,.04em 0 #2ec0c0}
+ 50%{text-shadow:.05em 0 #e0473a,-.05em 0 #2ec0c0}}
+.rewrite{color:#b8472f;font-weight:600;}
+@media(prefers-color-scheme:dark){.rewrite{color:#e0865f;}}
+.rewrite.rewritten{animation:flash 3s ease-out;}
+@keyframes flash{0%{background:rgba(184,71,47,.4)}100%{background:transparent}}
+#blackout{position:fixed;inset:0;background:#000;opacity:0;pointer-events:none;z-index:9999;}
+.fxmark{display:block;height:1px;}
+.wave{display:inline-block;animation:wv 4.2s ease-in-out infinite;}
+@keyframes wv{0%,100%{transform:translateY(0)}50%{transform:translateY(-.16em)}}
+.tiny{font-size:.72em;color:var(--mut);}
+.echo{text-shadow:.05em .03em rgba(140,140,140,.55),-.03em -.02em rgba(140,140,140,.35);}
+.anim{display:inline-block;}
+#end{text-align:center;color:var(--mut);font-size:.78rem;letter-spacing:.15em;
+ padding:6rem 0 2rem;display:none;}
+noscript{display:block;text-align:center;color:var(--mut);padding:4rem 1rem;}
+/* 製作中HUD(文字数・ペース・最新へ) */
+#hud{position:fixed;top:.6rem;right:.6rem;z-index:5000;display:flex;gap:.5rem;align-items:center;
+ background:color-mix(in srgb,var(--bg) 86%,transparent);border:1px solid var(--line);
+ border-radius:.5rem;padding:.3rem .55rem;font-family:ui-monospace,Menlo,monospace;
+ font-size:.72rem;color:var(--mut);backdrop-filter:blur(4px);}
+#hud button{font:inherit;color:var(--fg);background:transparent;border:1px solid var(--line);
+ border-radius:.4rem;padding:.15rem .5rem;cursor:pointer;}
+#hud button:hover{border-color:var(--fg);}
+/* 続きから読む */
+#resume{position:fixed;left:50%;bottom:1.2rem;transform:translateX(-50%);z-index:5000;}
+#resume button{font-family:"Optima","Palatino",Georgia,serif;font-style:italic;font-size:.95rem;
+ color:var(--fg);background:color-mix(in srgb,var(--bg) 88%,transparent);
+ border:1px solid var(--line);border-radius:999px;padding:.55em 1.4em;cursor:pointer;
+ backdrop-filter:blur(4px);box-shadow:0 2px 12px rgba(0,0,0,.12);}
+#resume button:hover{border-color:var(--fg);}
+</style></head>
+<body><div id="blackout"></div>
+<div id="resume" hidden><button id="resumebtn"></button></div>
+<header class="site"><h1>Ars Incompleta</h1><div id="status"></div><div class="scroll">SCROLL</div></header>
+<div class="wrap"><div id="text"></div>
+<noscript>このページは続きを自動表示するため JavaScript を使います。有効にしてください。</noscript>
+<div id="end">— 未完 —</div></div>
+<script src="app.js"></script></body></html>
