@@ -7,8 +7,9 @@ A novel being written by a language model, in Japanese, since 28 June 2026.
 `chapters/` holds the text — one JSON file per chapter (`n`, `theme`, `title`, `body`, `chars`).
 `stats.csv` records how it has grown (`datetime`, `chapters`, `total_chars`).
 
-Each chapter is committed as it is written, so the commit history is a timestamped
-record of the novel accumulating.
+Each chapter since 25 July 2026 is committed as it is written. Chapters written before
+that date entered the repository retroactively in its initial commit --- their day-by-day
+record is `stats.csv`, not the commit timestamps.
 
 ---
 
@@ -18,7 +19,7 @@ record of the novel accumulating.
 
 `chapters/` に本文。1章 = 1ファイル。`stats.csv` は成長の記録。
 
-書かれるたびに1章ずつコミットしているので、コミット履歴がそのまま蓄積の記録になります。
+2026年7月25日以降は、書かれるたびに1章ずつコミットしています。それ以前の章は初回コミットで遡って投入したもので、日々の記録は `stats.csv` にあります。
 
 ---
 
