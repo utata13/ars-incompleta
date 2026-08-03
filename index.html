@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
 <meta name="referrer" content="no-referrer">
-<title>Ars Incompleta — AIが書き続ける、終わらない小説</title><meta name="google-site-verification" content="SEvBRTitvQIDTwj2KH__jRfZiJbiiHbguCFP9aB2oXo"><meta name="description" content="人がパッと現れ、スッと消える世界。外見は14〜24歳だけ。ローカルAIが書き続ける、一生かけても読み終わらない連作小説。Ars Incompleta(未完の技法)。"><link rel="canonical" href="https://utata13.github.io/ars-incompleta/"><meta property="og:type" content="website"><meta property="og:site_name" content="Ars Incompleta"><meta property="og:title" content="Ars Incompleta — AIが書き続ける、終わらない小説"><meta property="og:description" content="人がパッと現れ、スッと消える世界。外見は14〜24歳だけ。ローカルAIが書き続ける、一生かけても読み終わらない連作小説。Ars Incompleta(未完の技法)。"><meta property="og:url" content="https://utata13.github.io/ars-incompleta/"><meta property="og:image" content="https://utata13.github.io/ars-incompleta/ogp.png?v=3"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Ars Incompleta — AIが書き続ける、終わらない小説"><meta name="twitter:description" content="人がパッと現れ、スッと消える世界。外見は14〜24歳だけ。ローカルAIが書き続ける、一生かけても読み終わらない連作小説。Ars Incompleta(未完の技法)。"><meta name="twitter:image" content="https://utata13.github.io/ars-incompleta/ogp.png?v=3"><style>
+<title>Ars Incompleta — AIが書き続ける、終わらない小説</title><meta name="google-site-verification" content="SEvBRTitvQIDTwj2KH__jRfZiJbiiHbguCFP9aB2oXo"><meta name="description" content="人がパッと現れ、スッと消える世界。外見は14〜24歳だけ。AIが書き続ける、一生かけても読み終わらない連作小説。Ars Incompleta(未完の技法)。"><link rel="canonical" href="https://utata13.github.io/ars-incompleta/"><meta property="og:type" content="website"><meta property="og:site_name" content="Ars Incompleta"><meta property="og:title" content="Ars Incompleta — AIが書き続ける、終わらない小説"><meta property="og:description" content="人がパッと現れ、スッと消える世界。外見は14〜24歳だけ。AIが書き続ける、一生かけても読み終わらない連作小説。Ars Incompleta(未完の技法)。"><meta property="og:url" content="https://utata13.github.io/ars-incompleta/"><meta property="og:image" content="https://utata13.github.io/ars-incompleta/ogp.png?v=3"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Ars Incompleta — AIが書き続ける、終わらない小説"><meta name="twitter:description" content="人がパッと現れ、スッと消える世界。外見は14〜24歳だけ。AIが書き続ける、一生かけても読み終わらない連作小説。Ars Incompleta(未完の技法)。"><meta name="twitter:image" content="https://utata13.github.io/ars-incompleta/ogp.png?v=3"><style>
 :root{--bg:#faf8f3;--fg:#2b2622;--mut:#9a9286;--line:#e6e0d6;}
 @media(prefers-color-scheme:dark){:root{--bg:#14120d;--fg:#e8e2d6;--mut:#7d766a;--line:#2c2820;}}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;}
@@ -47,6 +47,11 @@ strong{font-weight:600;}
 @keyframes wv{0%,100%{transform:translateY(0)}50%{transform:translateY(-.16em)}}
 .tiny{font-size:.72em;color:var(--mut);}
 .echo{text-shadow:.05em .03em rgba(140,140,140,.55),-.03em -.02em rgba(140,140,140,.35);}
+/* 揺らぎ: 古い章の文字は、書き換えられた字と元の字が交互に現れる。
+   読めるままだが、どちらが元だったのか決まらない(原文は chapters/*.json に無傷) */
+.flick{position:relative;}
+.flick.alt{color:#b8472f;}
+@media(prefers-color-scheme:dark){.flick.alt{color:#e0865f;}}
 .anim{display:inline-block;}
 #end{text-align:center;color:var(--mut);font-size:.78rem;letter-spacing:.15em;
  padding:6rem 0 2rem;display:none;}

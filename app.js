@@ -37,6 +37,11 @@ function doRewrite(el){
     el.textContent=s;
   },125);
 }
+// 交互に入れ替わる字: 元の字 ⇄ 書き換えられた字。周期は字ごとにずらす。
+function flick(el,a,b){let on=false;
+  const per=4200+Math.random()*3600, off=Math.random()*per;
+  setTimeout(()=>{setInterval(()=>{on=!on;
+    el.textContent=on?b:a; el.classList.toggle('alt',on);},per);},off);}
 function sep(t){const p=document.createElement('p');p.className='sep';p.textContent=t;box.appendChild(p);}
 function para(runs){const p=document.createElement('p');
   for(const r of runs){
@@ -48,6 +53,8 @@ function para(runs){const p=document.createElement('p');
         if(ANIM[ty]==='type'){s.dataset.full=t;s.textContent='';}
         p.appendChild(s);obs.observe(s);}
       else{p.appendChild(document.createTextNode(t));}}
+    else if(r&&r.fl){const s=document.createElement('span');s.className='flick';
+      s.textContent=r.fl[0];flick(s,r.fl[0],r.fl[1]);p.appendChild(s);}
     else if(r&&r.rw){const s=document.createElement('span');s.className='rewrite';
       s.textContent=r.rw[0];s.dataset.to=r.rw[1];p.appendChild(s);obs.observe(s);}
     else if(r&&r.fx){const s=document.createElement('span');s.className='fxmark';
